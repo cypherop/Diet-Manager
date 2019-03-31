@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/constraint">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:padding="8dp"
+            android:layout_margin="15dp"
+            app:cardElevation="20dp"
+            tools:ignore="MissingConstraints">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="35dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="#000"
+                    android:text="head"/>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/head">
+                    <TextView
+                        android:id="@+id/Calorie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textColor="#000"
+                        android:text="Calorie"/>
+                    <TextView
+                        android:id="@+id/Protein"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/Calorie"
+                        android:textColor="#000"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:text="Protein"/>
+                    <TextView
+                        android:id="@+id/Fats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/Protein"
+                        android:textColor="#000"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:text="Fats"/>
+                    <TextView
+                        android:id="@+id/Carbohydrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textColor="#000"
+                        app:layout_constraintTop_toBottomOf="@+id/Fats"
+                        android:text="Carbohydrate"/>
+                </android.support.constraint.ConstraintLayout>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:layout_constraintRight_toRightOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/head">
+                    <TextView
+                        android:id="@+id/v1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="#000"
+                        android:text="0"/>
+                    <TextView
+                        android:id="@+id/v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/v1"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="#000"
+                        android:text="0"/>
+                    <TextView
+                        android:id="@+id/v3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/v2"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="#000"
+                        android:text="0"/>
+
+                    <TextView
+                        android:id="@+id/v4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/v3"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="#000"
+                        android:text="0"/>
+
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:alpha="0.8"
+        android:background="@drawable/ripple_second"
+        android:text="Add"
+        android:textColor="#fff"
+        android:layout_below="@+id/constraint" />
+</RelativeLayout>
